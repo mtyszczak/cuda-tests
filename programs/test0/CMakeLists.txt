@@ -1,6 +1,6 @@
 add_executable( test0 main.cu )
 
-target_compile_features( test0 PUBLIC cxx_std_23 )
+set_target_properties( test0 PROPERTIES CUDA_STANDARD 20 )
 
 set_target_properties( test0 PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 set_property( TARGET test0 PROPERTY CUDA_SEPARABLE_COMPILATION ON )
